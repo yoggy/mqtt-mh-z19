@@ -149,7 +149,7 @@ void publish_message(int co2) {
   Serial.print("mqtt_publish : ");
   Serial.println(msg);
 
-  mqtt_client.publish(mqtt_publish_topic, msg);
+  mqtt_client.publish(mqtt_publish_topic, msg, true); // retain
 }
 
 /////////////////////////////////////////////////////////////////////////////
